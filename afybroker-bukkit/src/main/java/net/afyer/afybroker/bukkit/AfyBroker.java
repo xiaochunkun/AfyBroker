@@ -65,7 +65,7 @@ public class AfyBroker extends JavaPlugin {
         } catch (LifeCycleException e) {
             getLogger().severe("Broker client startup failed!");
             e.printStackTrace();
-            Bukkit.shutdown();
+//            Bukkit.shutdown();
         } catch (RemotingException | InterruptedException e) {
             getLogger().severe("Ping to the broker server failed!");
             e.printStackTrace();

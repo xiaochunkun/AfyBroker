@@ -68,7 +68,7 @@ public class AfyBroker extends Plugin {
         } catch (LifeCycleException e) {
             getLogger().severe("Broker client startup failed!");
             e.printStackTrace();
-            getProxy().stop();
+//            getProxy().stop();
         } catch (RemotingException | InterruptedException e) {
             getLogger().severe("Ping to the broker server failed!");
             e.printStackTrace();

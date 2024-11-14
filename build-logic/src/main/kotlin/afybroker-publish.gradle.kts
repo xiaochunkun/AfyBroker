@@ -5,9 +5,11 @@ plugins {
 
 extensions.configure<PublishingExtension> {
     repositories {
-        maven("http://repo.afyer.net/repository/maven-releases/") {
-            credentials(PasswordCredentials::class.java)
-            isAllowInsecureProtocol = true
+        maven("https://maven.mcplugin.top/repository/minecraft/") {
+            credentials(PasswordCredentials::class.java){
+                username = project.findProperty("XKUsername").toString()
+                password = project.findProperty("XKPassword").toString()
+            }
         }
     }
     publications {
