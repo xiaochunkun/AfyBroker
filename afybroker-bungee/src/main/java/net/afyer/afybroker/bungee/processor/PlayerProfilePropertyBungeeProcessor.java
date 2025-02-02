@@ -9,7 +9,6 @@ import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.connection.InitialHandler;
 import net.md_5.bungee.connection.LoginResult;
 import net.md_5.bungee.protocol.Property;
-import sun.misc.Unsafe;
 
 import java.lang.reflect.Field;
 import java.util.*;

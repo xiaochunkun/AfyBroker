@@ -27,7 +27,7 @@ public class SyncServerVelocityProcessor extends AsyncUserProcessor<SyncServerMe
             String host = address.split(":")[0];
             int port = Integer.parseInt(address.split(":")[1]);
             InetSocketAddress socketAddress = InetSocketAddress.createUnresolved(host, port);
-            if (server.isPresent() && server.get().getServerInfo().getAddress().equals(socketAddress)) {
+            if (server.isPresent() && (server.get().getServerInfo().getAddress().equals(socketAddress) || server.get().getServerInfo().getName().equals(name))) {
                 return;
             }
             ServerInfo serverInfo = new ServerInfo(name, socketAddress);

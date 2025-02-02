@@ -7,8 +7,8 @@ extensions.configure<PublishingExtension> {
     repositories {
         maven("https://maven.mcplugin.top/repository/minecraft/") {
             credentials(PasswordCredentials::class.java){
-                username = project.findProperty("XKUsername").toString()
-                password = project.findProperty("XKPassword").toString()
+                username = project.findProperty("mavenUsername").toString()
+                password = project.findProperty("mavenPassword").toString()
             }
         }
     }
